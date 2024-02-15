@@ -1,104 +1,127 @@
-:root {
-    --primary-color: #007BFF;
-    --secondary-color: #333;
-    --background-color: #f5f5f5;
-    --text-color: #666;
-}
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-}
-
-#left-content {
-    grid-column: 1;
-}
-
-#ideas {
-    grid-column: 2;
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#right-content {
-    grid-column: 3;
-}
-
-#ideas h2 {
-    color: var(--secondary-color);
-    font-size: 2em;
-}
-
-#ideas p {
-    color: var(--text-color);
-    font-size: 1.2em;
-    line-height: 1.5;
-}
-
-#ideas ul {
-    list-style: none;
+*{
+    margin: 0;
     padding: 0;
-}
-
-#ideas ul li {
-    margin-bottom: 10px;
-}
-
-#ideas ul li a {
-    color: var(--primary-color);
+    box-sizing: border-box;
+    list-style: none;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-#ideas ul li a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+body{
+     background-color: #1a1a1a;
+     color: #fff;
 }
 
-@media (max-width: 600px) {
-    body {
-        display: block;
-    }
-
-    #ideas {
-        padding: 10px;
-    }
-
-    #ideas h2 {
-        font-size: 1.5em;
-    }
-
-    #ideas p {
-        font-size: 1em;
-    }
+.wrapper{
+    display: flex;
+    position: relative;
 }
 
-.profile-picture {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
+.wrapper .sidebar{
+    width: 200px;
+    height: 100%;
+    background: #333;
+    padding: 30px 0px;
+    position: fixed;
+}
+
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+    color: #bbb;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background-color: #555;
+}
+        
+.wrapper .sidebar ul li:hover a{
+    color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+    display: block;
+    width: 40px;
+    background: #555;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #bbb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+    width: 100%;
+    margin-left: 200px;
+    position: relative; /* Add this line */
+    height: 100vh;
+}
+
+.wrapper .main_content .header{
+    padding: 20px;
+    background: #222;
+    color: #ccc;
+    border-bottom: 1px solid #444;
+}
+
+.wrapper .main_content .info{
+    margin: 20px;
+    color: #ccc;
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+    margin-bottom: 20px;
+}
+
+.welcome-container {
+    position: absolute; /* Change from relative to absolute */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    width: 100%;
+    height: 100%; /* Change from 400px to 100% */
+}
+
+.welcome-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-#bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#left-content {
-    grid-column: 1;
-    background-color: #e6e6e6; /* Light gray background */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#right-content {
-    grid-column: 3;
-    background-color: #e6e6e6; /* Light gray background */
-    padding: 20px;
-    border-radius: 10px;
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: white; /* Adjust as needed */
+    font-size: 5em; /* Adjust as needed */
 }
