@@ -29,18 +29,18 @@ a {
 }
 
 :root {
-    --uranian-blue: #add7f6ff;
-    --jordy-blue: #87bfffff;
-    --chefchaouen-blue: #3f8efcff;
-    --neon-blue: #2667ffff;
+    --background-color: #1a1a1a;
+    --sidebar-background: #333;
+    --hover-background: #555;
+    --social-media-background: #555;
 }
 
 body {
     padding: 20px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--uranian-blue);
-    color: #000; /* Black text */
+    background-color: var(--background-color);
+    color: #fff; 
 }
 
 .projects-grid {
@@ -51,16 +51,16 @@ body {
 
 .projects-grid section {
     flex: 0 0 calc(33.33% - 20px);
-    border: 1px solid #000; /* Black border */
+    border: 1px solid white; /* Black border */
     box-sizing: border-box;
     margin-bottom: 20px;
-    background-color: var(--jordy-blue);
+    background-color: var(--sidebar-background);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
 
 .projects-grid section:hover {
-    box-shadow: 0px 0px 20px var(--chefchaouen-blue);
+    box-shadow: 0px 0px 20px var(--hover-background);
 }
 
 .projects-grid section figure {
@@ -100,7 +100,7 @@ body {
 }
 
 #ideaButton {
-    background-color: #4CAF50; /* Green */
+    background-color: var(--social-media-background); /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -114,5 +114,5 @@ body {
 }
 
 #ideaButton:hover {
-    background-color: #45a049;
+    background-color: var(--hover-background);
 }
