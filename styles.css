@@ -1,118 +1,127 @@
-/* Reset default styles */
-* {
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-a {
-    color: #007bff;
+    list-style: none;
     text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-:root {
-    --uranian-blue: #add7f6ff;
-    --jordy-blue: #87bfffff;
-    --chefchaouen-blue: #3f8efcff;
-    --neon-blue: #2667ffff;
+body{
+     background-color: #1a1a1a;
+     color: #fff;
 }
 
-body {
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--uranian-blue);
-    color: #000; /* Black text */
-}
-
-.projects-grid {
+.wrapper{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    position: relative;
 }
 
-.projects-grid section {
-    flex: 0 0 calc(33.33% - 20px);
-    border: 1px solid #000; /* Black border */
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    background-color: var(--jordy-blue);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+.wrapper .sidebar{
+    width: 200px;
+    height: 100%;
+    background: #333;
+    padding: 30px 0px;
+    position: fixed;
 }
 
-.projects-grid section:hover {
-    box-shadow: 0px 0px 20px var(--chefchaouen-blue);
+.wrapper .sidebar h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.projects-grid section figure {
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+    color: #bbb;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background-color: #555;
+}
+        
+.wrapper .sidebar ul li:hover a{
+    color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+    display: block;
+    width: 40px;
+    background: #555;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #bbb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
     width: 100%;
-    height: 150px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    margin-left: 200px;
+    position: relative; /* Add this line */
+    height: 100vh;
 }
 
-.projects-grid section img {
+.wrapper .main_content .header{
+    padding: 20px;
+    background: #222;
+    color: #ccc;
+    border-bottom: 1px solid #444;
+}
+
+.wrapper .main_content .info{
+    margin: 20px;
+    color: #ccc;
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+    margin-bottom: 20px;
+}
+
+.welcome-container {
+    position: absolute; /* Change from relative to absolute */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    width: 100%;
+    height: 100%; /* Change from 400px to 100% */
+}
+
+.welcome-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-.projects-grid section img:hover {
-    transform: scale(1.1);
-}
-
-.projects-grid section figcaption {
-    padding: 20px;
-}
-
-.projects-grid section h2 {
-    margin-bottom: 10px;
-}
-
-.projects-grid section a {
-    color: #000; /* Black link text */
-    text-decoration: none;
-}
-
-.projects-grid section a:hover {
-    color: var(--neon-blue); /* Neon blue text for hovered links */
-}
-
-#ideaButton {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-
-#ideaButton:hover {
-    background-color: #45a049;
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust as needed */
+    transform: translateY(-50%);
+    color: white; /* Adjust as needed */
+    font-size: 5em; /* Adjust as needed */
 }
