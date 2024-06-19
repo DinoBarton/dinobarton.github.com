@@ -1,0 +1,118 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+:root {
+    --uranian-blue: #add7f6ff;
+    --jordy-blue: #87bfffff;
+    --chefchaouen-blue: #3f8efcff;
+    --neon-blue: #2667ffff;
+}
+
+body {
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--uranian-blue);
+    color: #000; /* Black text */
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects-grid section {
+    flex: 0 0 calc(33.33% - 20px);
+    border: 1px solid #000; /* Black border */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: var(--jordy-blue);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.projects-grid section:hover {
+    box-shadow: 0px 0px 20px var(--chefchaouen-blue);
+}
+
+.projects-grid section figure {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.projects-grid section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projects-grid section img:hover {
+    transform: scale(1.1);
+}
+
+.projects-grid section figcaption {
+    padding: 20px;
+}
+
+.projects-grid section h2 {
+    margin-bottom: 10px;
+}
+
+.projects-grid section a {
+    color: #000; /* Black link text */
+    text-decoration: none;
+}
+
+.projects-grid section a:hover {
+    color: var(--neon-blue); /* Neon blue text for hovered links */
+}
+
+#ideaButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#ideaButton:hover {
+    background-color: #45a049;
+}
