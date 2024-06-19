@@ -1,50 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DINOBARTON</title>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5J03NVCJ4"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-J5J03NVCJ4');
-        </script>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="sidebar">
-                <h2>DINO BARTON</h2>
-                <ul>
-                    <li><a href="index.html"><i class="fas fa-home"></i>Landing</a></li>
-                    <li><a href="news.html"><i class="fas fa-newspaper"></i>News</a></li>
-                    <li><a href="about.html"><i class="fas fa-address-card"></i>About</a></li>
-                    <li><a href="ideas.html"><i class="fas fa-project-diagram"></i>Ideas</a></li>
-                    <li><a href="contact.html"><i class="fas fa-address-book"></i>Contact</a></li>
-                </ul> 
-                <div class="social_media">
-                    <a href="https://github.com/DinoBarton"><i class="fab fa-github"></i></a>
-                    <a href="https://www.youtube.com/@DinoBarton"><i class="fab fa-youtube"></i></a>
-                    <a href="https://twitter.com/D1n0Bart0n"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="main_content">
-                <div class="header">Template</div>  
-                <div class="info">
-                    <div class="welcome-container">
-                        <img src="assets/DinoBarton.jpg" alt="Welcome Image">
-                        <h1 class="welcome-message">Welcome</h1>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
+<html>
+<head>
+    <title>Project Showcase</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="script" type="text/javascript" href="scripts.js">
+</head>
+<body>
+    <header>
+        <h1>Project Showcase</h1>
+    </header>
 
-    </body>   
+    <main class="projects-grid">
+        <section>
+            <figure>
+                <img src="media/Youtube.png" alt="YouTube">
+            </figure>
+            <figcaption>
+                <h2>Youtube Channel</h2>
+                <p>21 Subs!</p>
+                <a href="https://www.youtube.com/@DinoBarton">View Project</a>
+            </figcaption>
+        </section>
+        <section>
+            <figure>
+                <img src="media/Website.png" alt="My Website">
+            </figure>
+            <figcaption>
+                <h2>My Website!</h2>
+                <p>I thought this would be a dope way of using some HTML & CSS</p>
+                <a href="https://dinobarton.github.io">View Project</a>
+            </figcaption>
+        </section>
+        <!-- <section>
+            <figure>
+                <img src="path-to-your-image.jpg" alt="Project 1">
+            </figure>
+            <figcaption>
+                <h2>Project 1</h2>
+                <p>Description of Project 1</p>
+                <a href="#">View Project</a>
+            </figcaption>
+        </section> -->
+    </main>
+    <button id="ideaButton">Give me a project idea!</button>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
 </html>
