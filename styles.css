@@ -103,6 +103,10 @@ body{
     margin-bottom: 20px;
 }
 
+.sidebar-hidden {
+    display: none;
+}
+
 .welcome-container {
     position: absolute; /* Change from relative to absolute */
     top: 0; /* Add this line */

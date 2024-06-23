@@ -17,4 +17,3 @@ fetch('https://api.github.com/users/DinoBarton')
 .catch(error => {
     console.error('Error fetching GitHub profile:', error);
 });
-
