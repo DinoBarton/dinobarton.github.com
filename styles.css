@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,17 +9,17 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
-body{
-     background-color: #1a1a1a;
-     color: #fff;
+body {
+    background-color: white;
+    color: #fff;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     position: relative;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar {
     width: 200px;
     height: 100%;
     background: #333;
@@ -27,38 +27,38 @@ body{
     position: fixed;
 }
 
-.wrapper .sidebar h2{
+.wrapper .sidebar h2 {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul li {
     padding: 15px;
     border-bottom: 1px solid #555;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgba(255,255,255,0.05);
-}    
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar ul li a {
     color: #bbb;
     display: block;
 }
 
-.wrapper .sidebar ul li a .fas{
+.wrapper .sidebar ul li a .fas {
     width: 25px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar ul li:hover {
     background-color: #555;
 }
-        
-.wrapper .sidebar ul li:hover a{
+
+.wrapper .sidebar ul li:hover a {
     color: #fff;
 }
- 
-.wrapper .sidebar .social_media{
+
+.wrapper .sidebar .social_media {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -66,7 +66,7 @@ body{
     display: flex;
 }
 
-.wrapper .sidebar .social_media a{
+.wrapper .sidebar .social_media a {
     display: block;
     width: 40px;
     background: #555;
@@ -79,14 +79,21 @@ body{
     border-top-right-radius: 5px;
 }
 
-.wrapper .main_content{
+.wrapper .main_content .info h1,
+.wrapper .main_content .info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.wrapper .main_content {
     width: 100%;
     margin-left: 200px;
-    position: relative; /* Add this line */
+    position: relative;
     height: 100vh;
 }
 
-.wrapper .main_content .header{
+.wrapper .main_content .header {
     padding: 20px;
     background: #222;
     color: #ccc;
@@ -94,38 +101,62 @@ body{
 }
 
 .wrapper .main_content .info {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    height: calc(100vh - 40px); /* Adjust height to fill the viewport minus padding/margins */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    overflow-y: auto;
 }
 
-.wrapper .main_content .info div{
-    margin-bottom: 20px;
+.wrapper .main_content .info div {
+    line-height: 1.8;
+    font-size: 1.2em;
+    color: black;
+    text-align: justify;
 }
 
 .sidebar-hidden {
     display: none;
 }
 
-.welcome-container {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Horizontally center items */
-    height: 100%; /* Ensure it takes the full height of the parent container */
-    text-align: center; /* Center text alignment */
-    gap: 10px; /* Add spacing between the image and the text */
-}
-
-.welcome-container img {
-    width: 50px; /* Set the size of the square container */
-    height: 50px; /* Maintain a square aspect ratio */
-    border-radius: 10%; /* Optional: Slightly rounded corners */
-    object-fit: cover; /* Ensure the image fits within the square */
+.main_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
 }
 
 .welcome-message {
-    font-size: 3em; /* Adjust font size as needed */
-    color: white;
-    margin: 0; /* Remove default margin */
+    text-align: center;
+    color: black;
+}
+
+.welcome-message h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+#dynamic-text {
+    color: black;
+    font-weight: bold;
+    border-right: 2px solid black;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }

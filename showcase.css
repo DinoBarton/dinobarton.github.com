@@ -58,7 +58,7 @@ body {
 
 .projects-grid section {
     flex: 0 0 calc(33.33% - 20px);
-    border: 1px solid white; /* Black border */
+    border: 1px solid cyan; 
     box-sizing: border-box;
     margin-bottom: 20px;
     background-color: var(--sidebar-background);
