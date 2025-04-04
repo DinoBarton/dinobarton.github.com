@@ -3,7 +3,7 @@ const dynamicText = document.getElementById("dynamic-text");
 if (!dynamicText) {
     console.error("Element with id 'dynamic-text' not found!");
 } else {
-    const phrases = ["I'm Dino Barton!", "I'm a web developer!", "I'm a tech enthusiast!", "Im an aspiring entrepreneur!"];
+    const phrases = ["I'm Dino Barton!", "I'm a web developer!", "I'm a tech enthusiast!", "I'm an aspiring entrepreneur!"];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
@@ -34,3 +34,13 @@ if (!dynamicText) {
     typeEffect();
 }
 
+document.querySelectorAll('.file-tree li i.fa-folder').forEach(folderIcon => {
+    folderIcon.addEventListener('click', () => {
+        const nestedList = folderIcon.parentElement.querySelector('ul');
+        if (nestedList) {
+            nestedList.style.display = nestedList.style.display === 'none' ? 'block' : 'none';
+            folderIcon.classList.toggle('fa-folder-open');
+            folderIcon.classList.toggle('fa-folder');
+        }
+    });
+});

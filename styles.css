@@ -17,66 +17,7 @@ body {
 .wrapper {
     display: flex;
     position: relative;
-}
-
-.wrapper .sidebar {
-    width: 200px;
-    height: 100%;
-    background: #333;
-    padding: 30px 0px;
-    position: fixed;
-}
-
-.wrapper .sidebar h2 {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.wrapper .sidebar ul li {
-    padding: 15px;
-    border-bottom: 1px solid #555;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.wrapper .sidebar ul li a {
-    color: #bbb;
-    display: block;
-}
-
-.wrapper .sidebar ul li a .fas {
-    width: 25px;
-}
-
-.wrapper .sidebar ul li:hover {
-    background-color: #555;
-}
-
-.wrapper .sidebar ul li:hover a {
-    color: #fff;
-}
-
-.wrapper .sidebar .social_media {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
-
-.wrapper .sidebar .social_media a {
-    display: block;
-    width: 40px;
-    background: #555;
-    height: 40px;
-    line-height: 45px;
-    text-align: center;
-    margin: 0 5px;
-    color: #bbb;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    flex-direction: column;
 }
 
 .wrapper .main_content .info h1,
@@ -87,31 +28,33 @@ body {
 }
 
 .wrapper .main_content {
-    width: 100%;
-    margin-left: 200px;
-    position: relative;
-    height: 100vh;
+    width: 100%; /* Take up the full width of the page */
+    height: 100vh; /* Make the main content take up the full viewport height */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #fff; /* Ensure the background is white */
 }
 
+
 .wrapper .main_content .header {
+    width: 100%;
+    text-align: center;
     padding: 20px;
     background: #222;
     color: #ccc;
     border-bottom: 1px solid #444;
+    font-size: 1.5rem;
 }
 
 .wrapper .main_content .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 40px;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    overflow-y: auto;
+    max-width: 900px; /* Limit the width of the content */
+    width: 100%; /* Ensure it stretches to fit the container */
+    padding: 20px;
+    text-align: center; /* Center-align text */
 }
+
 
 .wrapper .main_content .info div {
     line-height: 1.8;
@@ -125,27 +68,33 @@ body {
 }
 
 .main_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    background-color: #fff;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    background-color: #fff; /* Ensure the background is white */
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove any extra margin */
+    position: relative; /* Ensure proper positioning */
 }
 
 .welcome-message {
-    text-align: center;
+    text-align: center; /* Center-align the text */
     color: black;
 }
 
 .welcome-message h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    color: black;
 }
 
-.welcome-message p {
-    font-size: 1.2rem;
+.welcome-message {
+    text-align: center; /* Center-align the text */
     color: black;
+    margin-bottom: 20px; /* Add spacing below the welcome message */
 }
 
 #dynamic-text {
@@ -159,4 +108,61 @@ body {
     50% {
         border-color: transparent;
     }
+}
+
+.file-tree-container {
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 900px; /* Optional: Limit the width */
+    text-align: left; /* Align the file tree content to the left */
+    margin-top: auto; /* Push the file tree to the bottom of the content */
+    padding: 10px; /* Add some padding for spacing */
+}
+
+.file-tree {
+    display: inline-block; /* Ensure the file tree content is centered within the container */
+    text-align: left; /* Align the file tree content to the left */
+    max-width: 900px; /* Optional: Limit the width */
+    padding: 10px; /* Add some padding for spacing */
+    background-color: transparent; /* Ensure no background interferes */
+}
+
+.file-tree ul {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.file-tree li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.file-tree li i {
+    margin-right: 8px;
+    color: #0078d7; /* Folder and file icon color */
+}
+
+.file-tree li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.file-tree li a:hover {
+    color: #0078d7; /* Highlight link on hover */
+}
+
+.file-tree li ul {
+    margin-left: 20px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+.file-tree li ul li {
+    margin-left: 10px;
+}
+
+.file-tree li i.fas.fa-folder {
+    color: #f4b400; /* Folder icon color */
 }

@@ -257,16 +257,12 @@ const projectIdeas = [
     "Create a meal planning app",
 ];
 
-// Function to get a random project idea
 function getProjectIdea() {
     const randomIndex = Math.floor(Math.random() * projectIdeas.length);
     return projectIdeas[randomIndex];
 }
 
-// Event listener for the button
 document.getElementById("ideaButton").addEventListener("click", function() {
     const idea = getProjectIdea();
-    // Display the idea to the user
-    // This could be a pop-up, an update to the DOM, an email, etc.
     alert(idea);
 });
